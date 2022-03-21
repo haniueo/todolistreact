@@ -1,21 +1,19 @@
-const colors = require('tailwindcss/colors')
-delete colors.lightBlue
-
 module.exports = {
-  purge: {
-    enabled: true,
-    content: ['./**/*.tsx', './**/*.html'],
+  content: [
+    './node_modules/flowbite/**/*.js',
+    './dist/**/*.html',
+    './src/**/*.{js,jsx,ts,tsx}',
+    './*.html',
+    '../../pkgs/theme/src/**/*.{js,jsx,ts,tsx}',
+    '../../pkgs/web/ui/src/**/*.{js,jsx,ts,tsx}',
+  ],
+  corePlugins: {
+    preflight: false,
   },
-  darkMode: false, // or 'media' or 'class'
-  theme: {
-    extend: {
-      colors,
-      backgroundColor: colors,
-      textColor: colors,
-    },
-  },
-  variants: {
-    extend: {},
-  },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/aspect-ratio'),
+    // require('@tailwindcss/forms'),
+    // require('@tailwindcss/typography'),
+    // require('@tailwindcss/line-clamp'),
+  ],
 }

@@ -3,12 +3,11 @@
 @tailwind utilities;
 
 html,
-body,
-#root {
-  padding: 0px;
-  margin: 0px;
+body {
+  padding: 0;
   width: 100%;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+  height: 100%;
+  margin: 0;
+  font-family: 'Segoe UI', 'Segoe UI Web (West European)', 'Segoe UI',
+    -apple-system, BlinkMacSystemFont, Roboto, 'Helvetica Neue', sans-serif;
 }

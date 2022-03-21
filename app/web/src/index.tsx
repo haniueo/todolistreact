@@ -1,4 +1,11 @@
-import { initApp } from 'web.init/src/initApp'
+import { initializeIcons } from '@fluentui/react'
+import { registerSW } from 'virtual:pwa-register'
+import { start } from 'web-init'
+import baseUrl from './baseurl'
 import './index.css'
-import './dropify.min.css'
-initApp()
+
+initializeIcons()
+start({
+  registerSW,
+  baseUrl,
+})

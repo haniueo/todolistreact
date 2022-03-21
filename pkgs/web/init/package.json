@@ -1,24 +1,19 @@
 {
-  "name": "web.init",
+  "name": "web-init",
   "version": "1.0.0",
-  "types": "./src/index.tsx",
+  "main": "./src/index.tsx",
   "license": "MIT",
   "private": true,
   "dependencies": {
-    "@emotion/react": "^11.4.0",
-    "@fluentui/react": "^8.27.0",
-    "@monaco-editor/react": "^4.3.1",
-    "framework7": "^6.3.3",
-    "framework7-react": "^6.3.3",
-    "html-react-parser": "^1.2.7",
-    "lodash.get": "^4.4.2",
-    "msgpackr": "^1.4.3",
-    "react-refresh": "^0.10.0",
-    "react-transition-group": "^4.4.2",
-    "regenerator-runtime": "^0.13.9"
+    "@babel/core": "^7.17.5",
+    "@emotion/react": "^11.8.2",
+    "find-my-way": "^5.2.0",
+    "lodash.find": "^4.6.0",
+    "react": "rc",
+    "react-dom": "rc",
+    "web-utils": "workspace:^"
   },
-  "main": "./build/index.js",
-  "scripts": {
-    "postinstall": "patch-package"
+  "devDependencies": {
+    "@types/lodash.find": "^4.6.6"
   }
 }

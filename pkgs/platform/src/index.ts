@@ -1,40 +1,10 @@
-import { expose } from 'builder'
-import { CustomGlobal, MainControl, server } from './server'
-import fetch from 'node-fetch'
-declare const global: CustomGlobal
+export * from './auth'
 
-global.fetch = fetch
+import { jsonPlugin } from './json'
 
-let main: MainControl = {
-  signal: async () => {},
-  onMessage: async () => {},
+export { FastifyRequest, FastifyReply, FastifyInstance } from 'fastify'
+export const settings = {
+  localIP: [] as string[],
+  mode: 'dev' as 'dev' | 'prod',
+  sidkey: '' as string,
 }
-
-export const start = (port: number) => {
-  main.signal = async (module, data) => {
-    if (data === 'server-ready') {
-      main.onMessage({
-        action: 'start',
-        port,
-      })
-    } 
-  }
-  server(main, 'prod')
-}
-
-expose({
-  start: async (parent, mode) => {
-    main.signal = async (module, data) => {
-      parent.sendTo('main', {
-        type: 'platform-signal',
-        module,
-        data,
-      })
-    }
-
-    await server(main, mode, parent)
-  },
-  onMessage: async (msg: any) => {
-    await main.onMessage(msg)
-  },
-})
