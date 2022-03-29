@@ -27,7 +27,7 @@ export const jsx = (...args: any[]) => {
     props.onClick = (e: any) => {
       if (!onClick) {
         e.stopPropagation()
-        e.preventDefault()
+        e.titleDefault()
         navigate(props.href)
       } else {
         onClick(e)

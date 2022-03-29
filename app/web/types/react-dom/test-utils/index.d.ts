@@ -17,7 +17,7 @@ export interface OptionalEventProperties {
     eventPhase?: number | undefined;
     isTrusted?: boolean | undefined;
     nativeEvent?: Event | undefined;
-    preventDefault?(): void;
+    titleDefault?(): void;
     stopPropagation?(): void;
     target?: EventTarget | undefined;
     timeStamp?: Date | undefined;

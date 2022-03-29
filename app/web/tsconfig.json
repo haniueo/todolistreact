@@ -19,16 +19,16 @@
     "jsxFactory": "jsx",
     "baseUrl": "./",
     "paths": {
-      "src/*": ["src/*"],
-      "types/*": ["types/*"],
+      "src/": ["src/"],
+      "types/": ["types/"],
       "react": ["./types/react"]
     },
     "jsxFragmentFactory": "React.Fragment",
     "jsxImportSource": "@emotion/react"
   },
   "include": [
-    "./src/**/*",
-    "./types/**/*",
+    "./src/*/",
+    "./types/*/",
     "./types/react",
     "./types/react-dom/next",
     "node_modules/vite-plugin-pwa/client.d.ts"

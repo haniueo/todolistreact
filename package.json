@@ -5,10 +5,16 @@
   "private": true,
   "license": "MIT",
   "dependencies": {
+    "axios": "^0.26.1",
+    "esbuild": "0.14.18",
     "esbuild-runner": "^2.2.1",
-    "esbuild": "0.14.18"
+    "peer": "^0.6.1",
+    "pnpm": "^6.32.3",
+    "react-icons": "^4.3.1",
+    "react-router-dom": "^6.2.2"
   },
   "devDependencies": {
-    "@types/node": "17.0.14"
+    "@types/node": "17.0.14",
+    "install-peers": "^1.0.3"
   }
 }

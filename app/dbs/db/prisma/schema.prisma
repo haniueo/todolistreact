@@ -8,3 +8,8 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
+model todos {
+  id    Int @default(autoincrement()) @id
+  done  Boolean
+  title String
+}

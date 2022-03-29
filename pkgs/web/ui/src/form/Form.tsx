@@ -70,7 +70,7 @@ export const Form: FC<IFormProps> = ({
       className={`form${className ? ' ' + className : ''}`}
       css={styles.form(css)}
       onSubmit={(e) => {
-        e.preventDefault()
+       
         if (onSubmit) onSubmit(dataContext)
       }}
     >
